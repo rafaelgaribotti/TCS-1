@@ -4,6 +4,7 @@
 // letra e conter apenas letras ou dígitos. Além disto, deve ter
 // no mínimo 1 caractere e no máximo 6 caracteres de comprimento
 // ----------------------------------------------------------------
+
 #include <stdio.h>
 
 int valid_s(char ch) {
