@@ -1,19 +1,22 @@
 # Travis example for Identifier created by Rafael Garibotti
 
 GCCFLAGS = -g -Wall -Wfatal-errors
-ALL = identifier
+ALL = cppcheck identifier
 GCC = gcc
 
 all: $(ALL)
 
-identifier: src/identifier.c
-	$(GCC) $(GCCFLAGS) -o $@ src/$@.c
+identifier: identifier/src/identifier.c
+	$(GCC) $(GCCFLAGS) -o identifier/$@ $<
 
-cov: src/identifier.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ src/identifier.c
+cov: identifier/src/identifier.c
+	cd identifier && $(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ src/identifier.c
+
+cppcheck: identifier/src/identifier.c
+	cppcheck $<
 
 clean:
-	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
+	cd identifier && rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
 
 test: all
 	bash test
