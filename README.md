@@ -16,6 +16,7 @@ Important files:
 Authors
 ------
 [**Luís Becker**](luis.s@edu.pucrs.br)
+
 **Samuel Finatto**
 
 
