@@ -9,8 +9,8 @@ all: $(ALL)
 identifier: src/identifier.c
 	$(GCC) $(GCCFLAGS) -o $@ src/$@.c
 
-cov: identifier.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+cov: src/identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ src/identifier.c
 
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
