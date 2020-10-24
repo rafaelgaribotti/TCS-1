@@ -4,7 +4,7 @@ Simple Travis example for C using GCC compiler based on the identifier program p
 
 Test results:
 
-[<img alt="Build Status" src="https://travis-ci.org/rafaelgaribotti/travis-identifier.svg?branch=main" height="40">][travis-url]
+[<img alt="Build Status" src="https://travis-ci.org/LufeSantos/TCS.svg?branch=warmup" height="40">][travis-url]
 
 Important files:
 
@@ -13,9 +13,10 @@ Important files:
 * [.travis.yml](.travis.yml)
 
 
-Author
+Authors
 ------
-[**Rafael Garibotti**](https://br.linkedin.com/in/rafaelgaribotti)
+[**Luís Becker**](luis.s@edu.pucrs.br)
+**Samuel Finatto**
 
 
 License
