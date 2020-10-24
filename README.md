@@ -15,7 +15,7 @@ Important files:
 
 Authors
 ------
-[**Luís Becker**](luis.s@edu.pucrs.br)
+**Luís Becker**
 
 **Samuel Finatto**
 
