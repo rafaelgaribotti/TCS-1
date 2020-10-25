@@ -2,13 +2,10 @@
 # Updated by Samuel Finatto and Luís Becker
 GCCFLAGS = -g -Wall -Wfatal-errors
 GCC = gcc
-ALL = cppcheck identifier
+ALL = cppcheck test
 MAKETESTS =
 
 all: $(ALL)
-
-identifier: identifier/src/identifier.c
-	$(GCC) $(GCCFLAGS) -o identifier/$@ $<
 
 cov:
 	cd identifier && $(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o identifier identifier/src/identifier.c
