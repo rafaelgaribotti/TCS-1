@@ -3,7 +3,7 @@
 GCCFLAGS = -g -Wall -Wfatal-errors
 GCC = gcc
 ALL = cppcheck identifier
-MAKETESTS = 
+MAKETESTS =
 
 all: $(ALL)
 
@@ -13,7 +13,7 @@ identifier: identifier/src/identifier.c
 cov:
 	cd identifier && $(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o identifier identifier/src/identifier.c
 
-cppcheck: 
+cppcheck:
 	cppcheck identifier/src/identifier.c --error-exitcode=1
 
 valgrid: identifier
@@ -25,9 +25,9 @@ addressSanitizer:
 
 clean:
 	cd identifier && rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
+	cd identifier && make clean
 
-test: all
-	bash test
-	
+test: tests
+
 tests:
-	cd identifier/test && make
+	cd identifier && make

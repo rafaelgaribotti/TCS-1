@@ -1,5 +1,19 @@
 #include "identifier.h"
 
+int valid_s(char ch) {
+  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
+    return 1;
+  else
+    return 0;
+}
+
+int valid_f(char ch) {
+  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= '0') && (ch <= '9')))
+    return 1;
+  else
+    return 0;
+}
+
 int identifier(char * ident)
 {
   char achar;
@@ -10,14 +24,14 @@ int identifier(char * ident)
     length = 1;
   }
   achar = ident[1];
-  while(achar != '\n') {
+  while(achar != '\0') {
     if(!(valid_f(achar))) {
       valid_id = 0;
     }
     length++;
     achar = ident[length];
   }
-  if (valid_id && (length >= 1) && (length < 6)) {
+  if (valid_id && (length >= 1) && (length <= 6)) {
     return 0;
   }
   else {
