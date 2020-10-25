@@ -16,4 +16,4 @@ install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
   - make
-  - make test
+  - make valgrid

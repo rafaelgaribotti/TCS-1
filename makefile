@@ -76,7 +76,7 @@ addressSanitizer: clean cppcheck compile
 	make run
 
 clean:
-	$(CLEANUP) $(TARGET1)
+	cd identifier && $(CLEANUP) $(TARGET1)
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
 
 ci: CFLAGS += -Werror
