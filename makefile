@@ -53,29 +53,48 @@ SRC_FILES1=\
   identifier/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
-
-all: clean cppcheck compile run
+all: clean cppcheck compile valgrid addressSanitizer run
 
 cppcheck:
-	cppcheck identifier/src/identifier.c --error-exitcode=1
+	@echo "  "
+	@echo "  "
+	@echo "********  cppcheck  *******"
+	cppcheck identifier/src/identifier.c
 
 compile:
+	@echo "  "
+	@echo "  "
+	@echo "********  compile  *******"
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 
-run:
+run: 
+	@echo "  "
+	@echo "  "
+	@echo "********  run  *******"
 	./$(TARGET1) -v
 
-valgrid: clean cppcheck compile
+valgrid:
+	@echo "  "
+	@echo "  "
+	@echo "********  valgrid  *******"
 	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET1)
 
-cov: clean
+cov: 
+	@echo "  "
+	@echo "  "
+	@echo "********  cov  *******"
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -fprofile-arcs -ftest-coverage -o cov
 
-addressSanitizer: clean cppcheck compile
+addressSanitizer:
+	@echo "  "
+	@echo "  "
+	@echo "********  addressSanitizer  *******"
 	$(C_COMPILER) $(CFLAGS) -fsanitize=address $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
-	make run
 
 clean:
+	@echo "  "
+	@echo "  "
+	@echo "********  clean  *******"
 	$(CLEANUP) $(TARGET1)
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
 
