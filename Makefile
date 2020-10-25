@@ -27,7 +27,5 @@ clean:
 	cd identifier && rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
 	cd identifier && make clean
 
-test: tests
-
-tests:
+test:
 	cd identifier && make
