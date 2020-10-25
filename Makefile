@@ -1,8 +1,9 @@
 # Travis example for Identifier created by Rafael Garibotti
-
+# Updated by Samuel Finatto and Luís Becker
 GCCFLAGS = -g -Wall -Wfatal-errors
 GCC = gcc
 ALL = cppcheck identifier
+MAKETESTS = 
 
 all: $(ALL)
 
@@ -27,3 +28,6 @@ clean:
 
 test: all
 	bash test
+	
+tests:
+	cd identifier/test && make
