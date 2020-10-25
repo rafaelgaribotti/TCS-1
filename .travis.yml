@@ -15,5 +15,7 @@ addons:
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
-  - make
-  - make valgrid
+  - make clean compile run
+  - make clean compile valgrind
+  - make clean compile addressSanitizer
+  - make clean compile cov
