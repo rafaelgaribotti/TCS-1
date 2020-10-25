@@ -24,20 +24,20 @@ TEST(Identifier, MaxSize){
 
 TEST(Identifier, MinSizeAndNumber){
   char string[10] = {"2"};
-  TEST_ASSERT_EQUAL(0,identifier(string));
+  TEST_ASSERT_EQUAL(1,identifier(string));
 }
 
 TEST(Identifier, Empty){
   char string[10] = {""};
-  TEST_ASSERT_EQUAL(0,identifier(string));
+  TEST_ASSERT_EQUAL(1,identifier(string));
 }
 
 TEST(Identifier, BiggerSize){
   char string[10] = {"letras7"};
-  TEST_ASSERT_EQUAL(0,identifier(string));
+  TEST_ASSERT_EQUAL(1,identifier(string));
 }
 
 TEST(Identifier, SpecialChar){
   char string[10] = {"dd~m"};
-  TEST_ASSERT_EQUAL(0,identifier(string));
+  TEST_ASSERT_EQUAL(1,identifier(string));
 }
