@@ -1,18 +1,7 @@
 #include "identifier.h"
 
-int valid_s(char ch) {
-  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
-    return 1;
-  else
-    return 0;
-}
-
-int valid_f(char ch) {
-  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= '0') && (ch <= '9')))
-    return 1;
-  else
-    return 0;
-}
+int valid_s(char ch);
+int valid_f(char ch);
 
 int identifier(char * ident)
 {
@@ -37,4 +26,24 @@ int identifier(char * ident)
   else {
     return 1;
   }
+}
+
+// int main(void)
+// {
+// 	char string[10] = {"Laaa"};
+//     identifier(string);
+// }
+
+int valid_s(char ch) {
+  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
+    return 1;
+  else
+    return 0;
+}
+
+int valid_f(char ch) {
+  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= '0') && (ch <= '9')))
+    return 1;
+  else
+    return 0;
 }

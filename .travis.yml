@@ -12,10 +12,12 @@ addons:
       - gcc
       - valgrind
       - cppcheck
+      - gcov
+      - gcovr
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
-  - make clean compile run
+  - make clean compile UnitTests
   - make clean compile valgrind
-  - make clean compile addressSanitizer
-  - make clean compile cov
+  - make clean addressSanitizer
+  - make clean cov

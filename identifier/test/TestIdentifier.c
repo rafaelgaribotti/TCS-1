@@ -1,7 +1,6 @@
 #include "unity.h"
 #include "unity_fixture.h"
 
-//#include "identifier.h"
 int identifier(char *ident);
 
 TEST_GROUP(Identifier);

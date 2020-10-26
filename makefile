@@ -41,7 +41,7 @@ CFLAGS += -Wno-unknown-pragmas
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
-
+GCCFLAGS = -g -Wall -Wfatal-errors 
 TARGET_BASE1=all_tests
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
@@ -53,7 +53,7 @@ SRC_FILES1=\
   identifier/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
-all: clean cppcheck compile valgrind clean cppcheck compile addressSanitizer run cov
+all: clean compile UnitTests clean compile valgrind clean addressSanitizer clean cov
 
 cppcheck:
 	@echo "  "
@@ -67,29 +67,33 @@ compile:
 	@echo "********  compile  *******"
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 
-run: 
+UnitTests: 
 	@echo "  "
 	@echo "  "
-	@echo "********  run  *******"
+	@echo "********  UnitTests  *******"
 	./$(TARGET1) -v
 
 valgrind:
 	@echo "  "
 	@echo "  "
 	@echo "********  valgrind  *******"
-	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET1)
+	valgrind --leak-check=full --show-leak-kinds=all ./all_tests.out
 
 cov: 
 	@echo "  "
 	@echo "  "
 	@echo "********  cov  *******"
-	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -fprofile-arcs -ftest-coverage -o cov
+	$(C_COMPILER) $(CFLAGS) -fprofile-arcs -ftest-coverage $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1) 
+	gcov ***.gcno -m
+	gcovr -r .
 
 addressSanitizer:
 	@echo "  "
 	@echo "  "
-	@echo "********  addressSanitizer  *******"
-	$(C_COMPILER) $(CFLAGS) -fsanitize=address $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
+	@echo "********addressSanitizer*******"
+	$(C_COMPILER) $(CFLAGS) -fsanitize=address -fno-omit-frame-pointer $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1) 
+	./all_tests.out heap_leak
+	./all_tests.out heap_buffer_overflow
 
 clean:
 	@echo "  "
