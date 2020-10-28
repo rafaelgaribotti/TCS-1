@@ -8,7 +8,7 @@ Test results:
 
 [Code coverage](gcoverage.html)
 
-Important files:
+### Important files:
 
 * [identifier.c](identifier.c)
 * [Makefile](Makefile)
