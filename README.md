@@ -6,7 +6,7 @@ Test results:
 
 [<img alt="Build Status" src="https://travis-ci.org/LufeSantos/TCS.svg?branch=warmup" height="40">][travis-url]
 
-[Code coverage](gcoverage.html)
+[Code Coverage Report](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/warmup/coverage/gcoverage.html)
 
 ### Important files:
 
