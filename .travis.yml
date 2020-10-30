@@ -24,10 +24,8 @@ jobs:
     - stage: deploy
       deploy:
         provider: releases
-        skip_cleanup: true
-        strategy: git
+        cleanup: false
         token: $GITHUB_TOKEN
         file: "gcoverage.html"
-        keep_history: true
         on:
           branch: warmup
