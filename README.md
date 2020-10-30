@@ -2,18 +2,24 @@ Travis Identifier [![License][license-img]][license-url]
 =
 Simple Travis example for C using GCC compiler based on the identifier program presented by Delamaro et al. "Introdução ao Teste de Software". Elsevier. 2007.
 
-Test results:
+Tests
+-
+
+### Test results:
 
 [<img alt="Build Status" src="https://travis-ci.org/LufeSantos/TCS.svg?branch=warmup" height="40">][travis-url]
 
 [Code Coverage Report](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/warmup/coverage/gcoverage.html)
 
-### Important files:
-
-* [identifier.c](identifier.c)
-* [Makefile](Makefile)
-* [.travis.yml](.travis.yml)
-
+### Tests Table
+|Test Number| Test Name | Input | Expected Output |
+|-|-|-|-|
+| 1 | MinSizeAndLetter | "L" | Ok |
+| 2 | MaxSize | "letra6" | Ok |
+| 3 | MinSizeAndNumber | "2" | Not Ok |
+| 4 | Empty | "" | Not Ok |
+| 5 | BiggerSize | "letras7" | Not Ok |
+| 6 | SpecialChar | "dd~m" | Not Ok |
 
 Authors
 ------
@@ -21,6 +27,11 @@ Authors
 
 **Samuel Finatto**
 
+### Important files:
+
+* [identifier.c](identifier.c)
+* [Makefile](Makefile)
+* [.travis.yml](.travis.yml)
 
 License
 -------
