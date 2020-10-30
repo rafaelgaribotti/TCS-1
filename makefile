@@ -101,6 +101,7 @@ clean:
 	@echo "  "
 	@echo "********  clean  *******"
 	$(CLEANUP) $(TARGET1)
-	rm -fr $(ALL) *.o *.dSYM *.gcda *.gcno *.gcov
+	rm -fr *.o *.dSYM *.gcda *.gcno *.gcov
+	rm -f coverage/*.html
 
 ci: CFLAGS += -Werror	cd identifier && $(CLEANUP) $(TARGET1)
