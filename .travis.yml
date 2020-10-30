@@ -23,10 +23,10 @@ jobs:
       - make all
     - stage: deploy
       deploy:
-        provider: pages
-        cleanup: false
+        provider: releases
+        skip_cleanup: true
         strategy: git
-        github_token: $GITHUB_TOKEN
+        token: $GITHUB_TOKEN
         file: "gcoverage.html"
         keep_history: true
         on:
