@@ -27,7 +27,8 @@ Authors
 
 **Samuel Finatto**
 
-### Important files:
+Important files:
+----
 
 * [identifier.c](identifier.c)
 * [Makefile](Makefile)
