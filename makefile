@@ -86,6 +86,7 @@ cov:
 	$(C_COMPILER) $(CFLAGS) -fprofile-arcs -ftest-coverage $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 	./$(TARGET1) -v
 	gcov ***.gcno -m
+	gcovr -f identifier
 	gcovr -f identifier --html --html-details -o coverage/gcoverage.html
 
 addressSanitizer:
