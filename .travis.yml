@@ -17,10 +17,4 @@ install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
   - make all
- 
- deploy:
-  provider: releases
-  api_key: "e8440df79a8c2442237ee8bad062abbf91e0d493"
-  file: "gcoverage.html"
-  skip_cleanup: true
   
