@@ -1,5 +1,6 @@
 # Travis example for Identifier created by Rafael Garibotti
-
+os: linux
+dist: xenial
 language: c
 compiler:
   - gcc
@@ -23,8 +24,10 @@ jobs:
     - stage: deploy
       deploy:
         provider: pages
-        skip_cleanup: true
+        cleanup: false
+        strategy: git
         github_token: $GITHUB_TOKEN
+        file: "gcoverage.html"
         keep_history: true
         on:
           branch: warmup
