@@ -22,4 +22,5 @@ jobs:
       script: 
       - make all
     - stage: deploy
-        script: bash commiter.sh
+      script:
+      - .\commiter.sh
