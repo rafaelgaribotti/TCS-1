@@ -15,17 +15,21 @@ addons:
       - gcovr
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
-
+  
 jobs:
   include:
     - stage: tests
-      script:
+      script: 
       - make all
     - stage: deploy
-      deploy:
-        provider: releases
-        cleanup: false
-        token: $GITHUB_TOKEN
-        file: coverage/**
-        on:
-          branch: warmup
+        script:
+        - commiter.sh
+      # deploy:
+        # provider: releases
+        # file_glob: true
+        # cleanup: false
+        # token: $GITHUB_TOKEN
+        # file: "coverage\\gcoverage.html"
+        # on:
+          # branch: warmup-travis-test
+          # tags: true
