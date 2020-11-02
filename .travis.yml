@@ -28,12 +28,3 @@ jobs:
           on:
             branch: warmup-travis-test
             tags: true
-      # deploy:
-        # provider: releases
-        # file_glob: true
-        # cleanup: false
-        # token: $GITHUB_TOKEN
-        # file: "coverage\\gcoverage.html"
-        # on:
-          # branch: warmup-travis-test
-          # tags: true
