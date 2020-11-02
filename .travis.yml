@@ -22,9 +22,4 @@ jobs:
       script: 
       - make all
     - stage: deploy
-        deploy:
-          provider: script
-          script: bash commiter.sh
-          on:
-            branch: warmup-travis-test
-            tags: true
+        script: bash commiter.sh
