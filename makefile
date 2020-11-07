@@ -87,7 +87,7 @@ cov:
 	./$(TARGET1) -v
 	gcov ***.gcno -m
 	gcovr --version
-	gcovr -f identifier
+	gcovr -r -f identifier
 
 addressSanitizer:
 	@echo "  "

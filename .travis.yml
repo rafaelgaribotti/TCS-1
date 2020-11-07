@@ -4,8 +4,6 @@ dist: xenial
 language: c
 compiler:
   - gcc
-before_install:
-  - sudo apt-get install gcovr
 addons:
   apt:
     sources:
@@ -14,6 +12,7 @@ addons:
       - gcc
       - valgrind
       - cppcheck
+      - gcovr
 
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
