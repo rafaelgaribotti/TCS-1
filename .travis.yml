@@ -13,6 +13,7 @@ addons:
       - valgrind
       - cppcheck
       - gcovr
+      update: true
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 
