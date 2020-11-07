@@ -85,9 +85,9 @@ cov:
 	@echo "********  cov  *******"
 	$(C_COMPILER) $(CFLAGS) -fprofile-arcs -ftest-coverage $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 	./$(TARGET1) -v
+	rm -r unity*
 	gcov ***.gcno -m
-	gcovr --version
-	gcovr -r -f identifier
+	gcovr -r . --html --html-details -o coverage/gcoverage.html
 
 addressSanitizer:
 	@echo "  "
