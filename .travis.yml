@@ -19,7 +19,7 @@ install:
 
 script:
   - make all
-  - mkdir deploy && mv converage deploy/
+  - mkdir deploy && mv coverage deploy/
 
 deploy:
   provider: pages
