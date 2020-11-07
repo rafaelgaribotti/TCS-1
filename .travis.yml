@@ -19,7 +19,6 @@ install:
 
 script:
   - make all
-  - mkdir deploy && mv coverage deploy/
 
 deploy:
   provider: script

@@ -87,7 +87,7 @@ cov:
 	./$(TARGET1) -v
 	rm -r unity*
 	gcov ***.gcno -m
-	gcovr -r . --html --html-details -o deploy/coverage/gcoverage.html
+	gcovr -r . --html --html-details -o coverage/gcoverage.html
 
 addressSanitizer:
 	@echo "  "
