@@ -1,36 +1,33 @@
-Travis Identifier [![License][license-img]][license-url]
+Trabalho Final
 =
-Simple Travis example for C using GCC compiler based on the identifier program presented by Delamaro et al. "Introdução ao Teste de Software". Elsevier. 2007.
+Trabalho final da disciplina de Teste e Confiabilidade de Sistemas do Curso de Engenharia de Computação da PUCRS
 
-Tests
+Testes
 -
 
-### Test results:
+### Resultado dos Testes:
 
-[<img alt="Build Status" src="https://travis-ci.org/LufeSantos/TCS.svg?branch=warmup" height="40">][travis-url]
+[<img alt="Build Status" src="https://travis-ci.org/LufeSantos/TCS.svg?branch=trabalho-final" height="40">][travis-url]
 
-**[Code Coverage Report](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/warmup/coverage/gcoverage.html)**
+**[Relatório de Cobertura de Código](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/warmup/coverage/gcoverage.html)**
 
-### Tests Table
+### Tabela de Testes
 |Test Number| Test Name | Input | Expected Output |
 |-|-|-|-|
-| 1 | MinSizeAndLetter | "L" | Ok |
-| 2 | MaxSize | "letra6" | Ok |
-| 3 | MinSizeAndNumber | "2" | Not Ok |
-| 4 | Empty | "" | Not Ok |
-| 5 | BiggerSize | "letras7" | Not Ok |
-| 6 | SpecialChar | "dd~m" | Not Ok |
 
-Authors
+Autores
 ------
 **Luís Becker**
 
 **Samuel Finatto**
 
-Important files:
+Professor
+-------
+**Rafael Garibotti**
+
+Arquivos Importantes:
 ----
 
-* [identifier.c](identifier.c)
 * [Makefile](Makefile)
 * [.travis.yml](.travis.yml)
 
