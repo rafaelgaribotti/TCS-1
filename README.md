@@ -9,7 +9,7 @@ Testes
 
 [<img alt="Build Status" src="https://travis-ci.org/LufeSantos/TCS.svg?branch=trabalho-final" height="40">][travis-url]
 
-**[Relatório de Cobertura de Código](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/warmup/coverage/gcoverage.html)**
+**[Relatório de Cobertura de Código](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/coverage/gcoverage.html)**
 
 ### Tabela de Testes
 |Test Number| Test Name | Input | Expected Output |
