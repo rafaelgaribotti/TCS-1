@@ -19,12 +19,10 @@ install:
 
 script:
   - make all
-  - mkdir deploy && mv coverage deploy/
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: false
-  local_dir: deploy
-  target_branch: warmup
+  local_dir: coverage
