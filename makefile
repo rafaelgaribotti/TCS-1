@@ -26,6 +26,7 @@ C_COMPILER=clang
 endif
 
 UNITY_ROOT= Unity
+CODE_ROOT= sort
 
 CFLAGS=-std=c99
 CFLAGS += -Wall
@@ -47,10 +48,10 @@ TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
   $(UNITY_ROOT)/src/unity.c \
   $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
-  identifier/src/identifier.c \
-	identifier/test/TestIdentifier.c \
-  identifier/test/test_runners/TestIdentifier_Runner.c \
-  identifier/test/test_runners/all_tests.c
+  $(CODE_ROOT)/src/sort.c \
+	$(CODE_ROOT)/test/TestIdentifier.c \
+  $(CODE_ROOT)/test/test_runners/TestIdentifier_Runner.c \
+  $(CODE_ROOT)/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 all: clean cppcheck compile UnitTests clean compile valgrind clean addressSanitizer clean cov
@@ -59,7 +60,7 @@ cppcheck:
 	@echo "  "
 	@echo "  "
 	@echo "********  cppcheck  *******"
-	cppcheck identifier/src/identifier.c
+	cppcheck sort/src/* sort/test/*
 
 compile:
 	@echo "  "
