@@ -18,16 +18,3 @@ install:
 
 script:
   - make all
-#jobs:
-#  include:
-#    - stage: tests
-#      script:
-#      - make all
-#    - stage: deploy
-#      deploy:
-#        provider: releases
-#        cleanup: false
-#        token: $GITHUB_TOKEN
-#        file: coverage/**
-#        on:
-#          branch: warmup

@@ -92,7 +92,7 @@ cov:
 addressSanitizer:
 	@echo "  "
 	@echo "  "
-	@echo "********addressSanitizer*******"
+	@echo "********  addressSanitizer  *******"
 	$(C_COMPILER) $(CFLAGS) -fsanitize=address -fno-omit-frame-pointer $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 	./all_tests.out heap_leak
 	./all_tests.out heap_buffer_overflow
