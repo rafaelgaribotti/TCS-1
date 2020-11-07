@@ -49,8 +49,8 @@ SRC_FILES1=\
   $(UNITY_ROOT)/src/unity.c \
   $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
   $(CODE_ROOT)/src/sort.c \
-	$(CODE_ROOT)/test/TestIdentifier.c \
-  $(CODE_ROOT)/test/test_runners/TestIdentifier_Runner.c \
+	$(CODE_ROOT)/test/TestSort.c \
+  $(CODE_ROOT)/test/test_runners/TestSort_Runner.c \
   $(CODE_ROOT)/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
@@ -106,4 +106,4 @@ clean:
 	rm -fr *.o *.dSYM *.gcda *.gcno *.gcov
 	rm -f coverage/*.html
 
-ci: CFLAGS += -Werror	cd identifier && $(CLEANUP) $(TARGET1)
+ci: CFLAGS += -Werror	cd sort && $(CLEANUP) $(TARGET1)
