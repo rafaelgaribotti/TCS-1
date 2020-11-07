@@ -1,4 +1,4 @@
-git config --global github.user luis.becker@acad.pucrs.br
+git config --global github.user LufeSantos
 git config --global github.token $GITHUB_TOKEN
 git add coverage/*
 git pull
