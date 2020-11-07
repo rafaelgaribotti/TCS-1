@@ -19,5 +19,4 @@ install:
 
 script:
   - make all
-after_success:
   - sh commiter.sh
