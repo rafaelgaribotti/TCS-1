@@ -255,18 +255,18 @@
             <td class="headerValue">sort/src/sort.c</td>
             <td></td>
             <td class="headerName">Lines:</td>
-            <td class="headerTableEntry">0</td>
+            <td class="headerTableEntry">24</td>
             <td class="headerTableEntry">146</td>
-            <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
+            <td class="headerTableEntry" style="background-color:LightPink">16.4 %</td>
           </tr>
           <tr>
             <td class="headerName">Date:</td>
-            <td class="headerValue">2020-11-07</td>
+            <td class="headerValue">2020-11-08</td>
             <td></td>
             <td class="headerName">Branches:</td>
-            <td class="headerTableEntry">0</td>
+            <td class="headerTableEntry">10</td>
             <td class="headerTableEntry">69</td>
-            <td class="headerTableEntry" style="background-color:LightPink">0.0 %</td>
+            <td class="headerTableEntry" style="background-color:LightPink">14.5 %</td>
           </tr>
         </table>
       </td>
@@ -1246,26 +1246,26 @@
 
     <tr>
     <td align="right" class="lineno"><pre>161</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void top_down_merge(int* a,int begin,int end,int* b){</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>385</pre></td>
+    <td align="left" class="src coveredLine"><pre>void top_down_merge(int* a,int begin,int end,int* b){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>162</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    int middle = (end+begin)/2;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>385</pre></td>
+    <td align="left" class="src coveredLine"><pre>    int middle = (end+begin)/2;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>163</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    int i0 = begin;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>385</pre></td>
+    <td align="left" class="src coveredLine"><pre>    int i0 = begin;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>164</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    int i1 = middle;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>385</pre></td>
+    <td align="left" class="src coveredLine"><pre>    int i1 = middle;</pre></td>
     </tr>
 
     <tr>
@@ -1276,8 +1276,8 @@
 
     <tr>
     <td align="right" class="lineno"><pre>166</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    int n = end-begin;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>385</pre></td>
+    <td align="left" class="src coveredLine"><pre>    int n = end-begin;</pre></td>
     </tr>
 
     <tr>
@@ -1288,14 +1288,14 @@
 
     <tr>
     <td align="right" class="lineno"><pre>168</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    if(n &lt; 2){</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>385</pre></td>
+    <td align="left" class="src coveredLine"><pre>    if(n &lt; 2){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>169</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>        return;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>200</pre></td>
+    <td align="left" class="src coveredLine"><pre>        return;</pre></td>
     </tr>
 
     <tr>
@@ -1312,14 +1312,14 @@
 
     <tr>
     <td align="right" class="lineno"><pre>172</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    top_down_merge(a, begin, middle, b);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>185</pre></td>
+    <td align="left" class="src coveredLine"><pre>    top_down_merge(a, begin, middle, b);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>173</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    top_down_merge(a, middle, end, b);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>185</pre></td>
+    <td align="left" class="src coveredLine"><pre>    top_down_merge(a, middle, end, b);</pre></td>
     </tr>
 
     <tr>
@@ -1330,26 +1330,26 @@
 
     <tr>
     <td align="right" class="lineno"><pre>175</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    for (index = begin; index &lt; end; index++) {</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>1131</pre></td>
+    <td align="left" class="src coveredLine"><pre>    for (index = begin; index &lt; end; index++) {</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>176</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>        if (i0 &lt; middle &amp;&amp; (i1 &gt;= end || a[i0] &lt;= a[i1])){</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>946</pre></td>
+    <td align="left" class="src coveredLine"><pre>        if (i0 &lt; middle &amp;&amp; (i1 &gt;= end || a[i0] &lt;= a[i1])){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>177</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>            b[index] = a[i0];</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>436</pre></td>
+    <td align="left" class="src coveredLine"><pre>            b[index] = a[i0];</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>178</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>            i0++;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>436</pre></td>
+    <td align="left" class="src coveredLine"><pre>            i0++;</pre></td>
     </tr>
 
     <tr>
@@ -1360,14 +1360,14 @@
 
     <tr>
     <td align="right" class="lineno"><pre>180</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>            b[index] = a[i1];</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>510</pre></td>
+    <td align="left" class="src coveredLine"><pre>            b[index] = a[i1];</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>181</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>            i1++;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>510</pre></td>
+    <td align="left" class="src coveredLine"><pre>            i1++;</pre></td>
     </tr>
 
     <tr>
@@ -1378,14 +1378,14 @@
 
     <tr>
     <td align="right" class="lineno"><pre>183</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>        numberOfComparisons++;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>946</pre></td>
+    <td align="left" class="src coveredLine"><pre>        numberOfComparisons++;</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>184</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>        numberOfSwaps++;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>946</pre></td>
+    <td align="left" class="src coveredLine"><pre>        numberOfSwaps++;</pre></td>
     </tr>
 
     <tr>
@@ -1402,14 +1402,14 @@
 
     <tr>
     <td align="right" class="lineno"><pre>187</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    memcpy((a+begin),(b+begin),sizeof(int)*(n));</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>185</pre></td>
+    <td align="left" class="src coveredLine"><pre>    memcpy((a+begin),(b+begin),sizeof(int)*(n));</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>188</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    numberOfSwaps+= n;</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>185</pre></td>
+    <td align="left" class="src coveredLine"><pre>    numberOfSwaps+= n;</pre></td>
     </tr>
 
     <tr>
@@ -1426,32 +1426,32 @@
 
     <tr>
     <td align="right" class="lineno"><pre>191</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>void merge_sort(int* a,int n){</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15</pre></td>
+    <td align="left" class="src coveredLine"><pre>void merge_sort(int* a,int n){</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>192</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    int* b = (int*)malloc(sizeof(int)*n);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15</pre></td>
+    <td align="left" class="src coveredLine"><pre>    int* b = (int*)malloc(sizeof(int)*n);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>193</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    top_down_merge(a, 0, n, b);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15</pre></td>
+    <td align="left" class="src coveredLine"><pre>    top_down_merge(a, 0, n, b);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>194</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>    free(b);</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15</pre></td>
+    <td align="left" class="src coveredLine"><pre>    free(b);</pre></td>
     </tr>
 
     <tr>
     <td align="right" class="lineno"><pre>195</pre></td>
-    <td align="right" class="linecount uncoveredLine"><pre></pre></td>
-    <td align="left" class="src uncoveredLine"><pre>}</pre></td>
+    <td align="right" class="linecount coveredLine"><pre>15</pre></td>
+    <td align="left" class="src coveredLine"><pre>}</pre></td>
     </tr>
 
     <tr>
