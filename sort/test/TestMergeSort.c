@@ -81,7 +81,7 @@ TEST(MergeSort, testOneValueDifferent){
 // check if the sort function works with only negative values
 TEST(MergeSort, testOnlyNegativeValues){
   for(int i=0;i<SIZE_ARRAY;i++){
-    ARRAY1[i] = i-SIZE_ARRAY;
+    ARRAY1[i] = i*(-1);
   }
 
   merge_sort(ARRAY1, SIZE_ARRAY);

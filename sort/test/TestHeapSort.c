@@ -4,7 +4,7 @@
 #include "../src/sort.h"
 #include "utils.c"
 
-#define SIZE_ARRAY 10
+#define SIZE_ARRAY 1000
 
 TEST_GROUP(HeapSort);
 
@@ -81,7 +81,7 @@ TEST(HeapSort, testOneValueDifferent){
 // check if the sort function works with only negative values
 TEST(HeapSort, testOnlyNegativeValues){
   for(int i=0;i<SIZE_ARRAY;i++){
-    ARRAY1[i] = i-SIZE_ARRAY;
+    ARRAY1[i] = i*(-1);
   }
 
   heap_sort(ARRAY1, SIZE_ARRAY);

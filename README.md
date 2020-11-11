@@ -17,9 +17,17 @@ Testes
 4. [sort/test/test_runners/TestSort_Runner.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.sort_test_test_runners_TestSort_Runner.c.html)
 5. [sort/test/TestSort.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.sort_test_TestSort.c.html)
 
-### Tabela de Testes
-|Test Number| Test Name | Input | Expected Output |
-|-|-|-|-|
+### Lista de Testes
+1. CheckIfValuesWereChanged
+2. ArrayOrder
+3. SingleValue
+4. OnlyZerosValues
+5. DuplicatedValues
+6. OneValueDifferent
+7. OnlyNegativeValues
+8. WorstCase
+9. BestCase
+
 
 Autores
 ------

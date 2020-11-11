@@ -2,17 +2,19 @@
 
 static void RunAllTests(void)
 {
-  printf("\n --- Selection Sort ---\n");
+  //printf("\n");
+  RUN_TEST_GROUP(SortArray);
+  //printf("\n");
   RUN_TEST_GROUP(SelectionSort);
-  printf("\n --- Insertion Sort ---\n");
+  //printf("\n");
   RUN_TEST_GROUP(InsertionSort);
-  printf("\n --- Shell Sort ---\n");
+  //printf("\n");
   RUN_TEST_GROUP(ShellSort);
-  printf("\n --- Quick Sort ---\n");
+  //printf("\n");
   RUN_TEST_GROUP(QuickSort);
-  printf("\n --- Heap Sort ---\n");
+  //printf("\n");
   RUN_TEST_GROUP(HeapSort);
-  printf("\n --- Merge Sort ---\n");
+  //printf("\n");
   RUN_TEST_GROUP(MergeSort);
 }
 

@@ -28,7 +28,8 @@ endif
 UNITY_ROOT= Unity
 CODE_ROOT= sort
 
-CFLAGS=-std=c99
+CFLAGS  = -std=c99
+CFLAGS += -w
 CFLAGS += -Wall
 CFLAGS += -Wextra
 CFLAGS += -Wpointer-arith
@@ -42,7 +43,6 @@ CFLAGS += -Wno-unknown-pragmas
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
-GCCFLAGS = -g -Wall -Wfatal-errors
 TARGET_BASE1=all_tests
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
@@ -55,6 +55,7 @@ SRC_FILES1=\
 	$(CODE_ROOT)/test/TestQuickSort.c \
 	$(CODE_ROOT)/test/TestHeapSort.c \
 	$(CODE_ROOT)/test/TestMergeSort.c \
+	$(CODE_ROOT)/test/TestSortArray.c \
   $(CODE_ROOT)/test/test_runners/TestSort_Runner.c \
   $(CODE_ROOT)/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
@@ -90,9 +91,10 @@ cov:
 	@echo "  "
 	@echo "********  cov  *******"
 	$(C_COMPILER) $(CFLAGS) -fprofile-arcs -ftest-coverage $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
-	./$(TARGET1) -v
+	./$(TARGET1)
 	rm -r unity*
-	gcov ***.gcno -m
+	gcov ***.gcno
+	gcovr -r .
 	gcovr -r . --html --html-details -o coverage/gcoverage.html
 
 addressSanitizer:

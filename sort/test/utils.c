@@ -1,14 +1,19 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+static void initArray(int* array, int size)
+{
+    for(int i=0;i<size;i++){
+      array[i] = size-1-i;
+      array[i] = i%2 == 0 ? array[i] : array[i]*-1; // interleaves positive and negative values
+    }
+}
+
 // init two identical arrays with interleaved positive and negative values
 static void initArrays(int* array1, int* array2, int size)
 {
-    for(int i=0;i<size;i++){
-      array1[i] = size-1-i;
-      array1[i] = i%2 == 0 ? array1[i] : array1[i]*-1; // interleaves positive and negative values
-      array2[i] = array1[i];
-    }
+    initArray(array1, size);
+    initArray(array2, size);
 }
 
 // check if all elemets in array1 are in array2

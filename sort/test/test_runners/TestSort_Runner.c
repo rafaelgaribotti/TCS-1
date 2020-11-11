@@ -1,6 +1,17 @@
 #include "unity.h"
 #include "unity_fixture.h"
 
+
+TEST_GROUP_RUNNER(SortArray)
+{
+  RUN_TEST_CASE(SortArray, TestSelectionSort);
+  RUN_TEST_CASE(SortArray, TestInsertionSort);
+  RUN_TEST_CASE(SortArray, TestShellSort);
+  RUN_TEST_CASE(SortArray, TestQuickSort);
+  RUN_TEST_CASE(SortArray, TestHeapSort);
+  RUN_TEST_CASE(SortArray, TestMergeSort);
+}
+
 TEST_GROUP_RUNNER(SelectionSort)
 {
   RUN_TEST_CASE(SelectionSort, testCheckIfValuesWereChanged);
