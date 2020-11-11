@@ -76,16 +76,16 @@ ALL_LDFLAGS += $(addprefix -Xlinker ,$(EXTRA_LDFLAGS))
 # Target rules
 all: app
 
-array.o:array.c
+array.o:src/array.c
 	gcc -o $@ -c $<
 
-sort.o:sort.c
+sort.o:src/sort.c
 	gcc -o $@ -c $<
 
-get_opt.o:get_opt.c
+get_opt.o:src/get_opt.c
 	gcc -o $@ -c $<
 
-main.o:main.c
+main.o:src/main.c
 	gcc -o $@ -c $<
 
 app: array.o sort.o get_opt.o main.o

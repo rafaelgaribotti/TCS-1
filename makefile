@@ -49,12 +49,17 @@ SRC_FILES1=\
   $(UNITY_ROOT)/src/unity.c \
   $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
   $(CODE_ROOT)/src/sort.c \
-	$(CODE_ROOT)/test/TestSort.c \
+	$(CODE_ROOT)/test/TestSelectionSort.c \
+	$(CODE_ROOT)/test/TestInsertionSort.c \
+	$(CODE_ROOT)/test/TestShellSort.c \
+	$(CODE_ROOT)/test/TestQuickSort.c \
+	$(CODE_ROOT)/test/TestHeapSort.c \
+	$(CODE_ROOT)/test/TestMergeSort.c \
   $(CODE_ROOT)/test/test_runners/TestSort_Runner.c \
   $(CODE_ROOT)/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
-all: clean cppcheck compile UnitTests clean compile valgrind clean addressSanitizer clean cov
+all: clean cppcheck unitTests valgrind addressSanitizer cov
 
 cppcheck:
 	@echo "  "
@@ -68,13 +73,13 @@ compile:
 	@echo "********  compile  *******"
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 
-UnitTests:
+unitTests: compile
 	@echo "  "
 	@echo "  "
 	@echo "********  UnitTests  *******"
 	./$(TARGET1) -v
 
-valgrind:
+valgrind: compile
 	@echo "  "
 	@echo "  "
 	@echo "********  valgrind  *******"
