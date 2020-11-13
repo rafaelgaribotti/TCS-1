@@ -11,11 +11,8 @@ Testes
 
 ### [Relatórios de Cobertura de Código](https://github.com/LufeSantos/TCS/tree/gh-pages)
 
-1. **[Relatório geral](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.html)**
-2. [sort/src/sort.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.sort_src_sort.c.html)
-3. [sort/test/test_runners/all_tests.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blobgh-pages/gcoverage.sort_test_test_runners_all_tests.c.html)
-4. [sort/test/test_runners/TestSort_Runner.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.sort_test_test_runners_TestSort_Runner.c.html)
-5. [sort/test/TestSort.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.sort_test_TestSort.c.html)
+- **[Relatório geral](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.html)**
+- **[sort.c](http://htmlpreview.github.io/?https://github.com/LufeSantos/TCS/blob/gh-pages/gcoverage.sort_src_sort.c.html)**
 
 ### Lista de Testes
 1. CheckIfValuesWereChanged
