@@ -48,3 +48,8 @@ TEST(SortArray, TestMergeSort){
   sort_array(ARRAY1, SIZE_ARRAY, MERGE);
   TEST_ASSERT_MESSAGE(isArrayInCorrectOrder(ARRAY1, SIZE_ARRAY), "Array is not in order");
 }
+
+TEST(SortArray, TestNoSort){
+  sort_array(ARRAY1, SIZE_ARRAY, 6);
+  TEST_ASSERT_FALSE_MESSAGE(isArrayInCorrectOrder(ARRAY1, SIZE_ARRAY), "Array IS in order");
+};

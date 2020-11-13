@@ -112,5 +112,6 @@ clean:
 	$(CLEANUP) $(TARGET1)
 	rm -fr *.o *.dSYM *.gcda *.gcno *.gcov
 	rm -f coverage/*.html
+	cd sort && make clean
 
 ci: CFLAGS += -Werror	cd sort && $(CLEANUP) $(TARGET1)

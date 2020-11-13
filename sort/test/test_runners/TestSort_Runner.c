@@ -10,6 +10,7 @@ TEST_GROUP_RUNNER(SortArray)
   RUN_TEST_CASE(SortArray, TestQuickSort);
   RUN_TEST_CASE(SortArray, TestHeapSort);
   RUN_TEST_CASE(SortArray, TestMergeSort);
+  RUN_TEST_CASE(SortArray, TestNoSort);
 }
 
 TEST_GROUP_RUNNER(SelectionSort)
