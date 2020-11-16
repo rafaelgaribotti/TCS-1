@@ -81,7 +81,7 @@ TEST(HeapSort, testOneValueDifferent){
 // check if the sort function works with only negative values
 TEST(HeapSort, testOnlyNegativeValues){
   for(int i=0;i<SIZE_ARRAY;i++){
-    ARRAY1[i] = i*(-1);
+    ARRAY1[i] = (i+1)*(-1);
   }
 
   heap_sort(ARRAY1, SIZE_ARRAY);
