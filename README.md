@@ -25,6 +25,7 @@ Testes
 8. WorstCase
 9. BestCase
 
+Obs.: Implementação do Heap Sort falha no teste de melhor caso (BestCase)
 
 Autores
 ------
